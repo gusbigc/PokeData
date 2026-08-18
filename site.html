@@ -24,16 +24,15 @@
     <div class="busca">
         <h1>Digite o nome do pokémon que deseja buscar:</h1>
         <form action="/buscar" method="get">
-            <label for="caixa-busca">Pesquisar:</label>
+            <label for="caixa-busca" class="txt-pesquisa">Pesquisar:</label>
             <input type="search" id="caixa-busca" name="pokemon" placeholder="Digite o pokémon que deseja procurar: ">
-            <button type="submit">Buscar</button>
+            <button type="submit" class="botao-buscar">Buscar</button>
         </form>
-        <p>Tipo: Fogo</p>
     </div>
     <!--<div> não tem nenhum significado visual próprio, é como se 
         fosse uma caixa invisivel que agrupa outras coisas juntas.
         É usado divs para organizar seções da página-->
-
+ 
     <!--Links-->
     <!--<a href="https://pokeapi.co">Ir para a PokeAPI</a>-->
     <!--a = ancora, href = pra onde o link leva-->
@@ -42,6 +41,8 @@
         <div class="card">
         <h1 id="nome-pokemon">Charmander</h1>
         <img src="https://upload.wikimedia.org/wikipedia/pt/9/95/Charizard.png">
+        <p class="info-basica">Altura: 0.6m &nbsp;|&nbsp; Peso: 8.5kg</p>
+        <p class="tipo">Tipo: Fogo</p>
         <ol>
         <li>HP: 78</li>
         <li>Ataque: 84</li>

@@ -8,7 +8,8 @@
     box-sizing: border-box;
     background: linear-gradient(135deg, #0e1e38 0%, #0a1526 100%);
     border: 1px solid rgba(0, 58, 112, 0.5);
-    padding: 20px;
+    padding: 2px;
+    padding-top: 0px;
     border-radius: 20px; /*
     border-radius controla o quanto os cantos ficam arredondados - quanto maior o número,
     mais redondo
@@ -33,6 +34,7 @@
     overflow: hidden;
 }
 
+
 .card h1{
     color: #FFCC00;
     font-family: 'Pokemon';
@@ -54,7 +56,7 @@ body{
 img{
         width: 100%;
         height: auto;
-        max-width: 200px;
+        max-width: 300px;
         display: block;
         margin: 10px auto;
         /*margin: 0 auto é uma forma bem comum pra centralizar horizontalmente
@@ -128,9 +130,53 @@ h1{
     width: 100%; 
     text-align: left;
     align-self: flex-start;
-    color: #bdc2c9;
+    color: #F8F9FA;
     font-weight: 500;
     padding-left: 25px;
     margin: 10px 0 0 0;
     line-height: 1.8;
+}
+.botao-buscar{
+    background-color: rgba(0, 58, 112, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+#caixa-busca{
+    background-color: rgba(0,0,0,0.3);
+    font-family: 'Open Sans', sans-serif;
+    width: 250px;
+    color: white;
+}
+
+.txt-pesquisa{
+    color: #F8F9FA;
+}
+
+#nome-pokemon{
+    font-size: 45px;
+}
+
+.info-basica{
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+    padding-left: 9px;
+    font-weight: 500;
+    margin: 10px 0 0 0 ;
+    line-height: 1.8;
+    color: #F8F9FA;
+}
+
+.tipo{
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+    padding-left: 9px;
+    font-weight: 500;
+    margin: 10px 0 0 0 ;
+    line-height: 1.8;
+    color: #F8F9FA;    
 }
