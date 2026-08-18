@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- isso avisa ao navegador que é u html moderno
+                     sempre vai no topo-->
+<html lang="pt"> <!--envolve a página inteira-->
+<head> <!--informações que não aparecem visualmente na pagina
+           titulo da aba, configurações-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--controla como a página se comporta em telas menores(celulares)
+        .Sem isso, sites ficam bizarros no mobile-->
+    <title>Título da aba do navegador teste</title>
+    <link rel="stylesheet" href="estilo.css"><!--
+    <link> avisa o navegador que vai conectar um recurso externo
+    rel="stylesheet" diz que tipo de recurso é(nesse caso, uma folha de estilo/CSS)
+    href="estilo.css" é onde esse arquivo está(nesse caso, mesmo nome do arquivo que
+    fo criado, mesma pasta)
+    -->
+</head>
+<body> <!--tudo que aparece visualmente pro usuário-->
+    <h1 class="titulo">PokeData</h1>
+    <div class="descricao">
+        <p>Este é um site que informa os dados básicos de pokémons, desde altura e peso até locais de encontro</p>
+    </div>
+    <!--Divs - a "caixa" mais importante do HTML-->
+    <div class="busca">
+        <h1>Digite o nome do pokémon que deseja buscar:</h1>
+        <form action="/buscar" method="get">
+            <label for="caixa-busca">Pesquisar:</label>
+            <input type="search" id="caixa-busca" name="pokemon" placeholder="Digite o pokémon que deseja procurar: ">
+            <button type="submit">Buscar</button>
+        </form>
+        <p>Tipo: Fogo</p>
+    </div>
+    <!--<div> não tem nenhum significado visual próprio, é como se 
+        fosse uma caixa invisivel que agrupa outras coisas juntas.
+        É usado divs para organizar seções da página-->
+
+    <!--Links-->
+    <!--<a href="https://pokeapi.co">Ir para a PokeAPI</a>-->
+    <!--a = ancora, href = pra onde o link leva-->
+
+    <!--Class e id - o gancho pro CSS-->
+        <div class="card">
+        <h1 id="nome-pokemon">Charmander</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/pt/9/95/Charizard.png">
+        <ol>
+        <li>HP: 78</li>
+        <li>Ataque: 84</li>
+        <li>Defesa: 78</li>
+    </ol>
+    </div>
+    <!--class -> um "rótulo" que voce pode reutilizar em varias tags
+        id -> um rótulo único, só uma tag na página inteira pode ter
+        aquela id
+        é pensar em class como "categoria"(várias coisas podem ser da
+        mesma categoria) e id como "nome próprio(só uma coisa tem aquele
+        nome específico). o css vai usar esses class/id pra saber "em
+        quais elementos aplicar qual estilo"-->
+</body>
+</html>

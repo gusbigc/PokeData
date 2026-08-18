@@ -27,16 +27,20 @@ def buscaPokemon(nome):
         print(f"Altura: {dadosDICT["height"] / 10} m")
         EncountersJSON = encounters(dadosDICT)
         print("Encounter Areas:")
+
         for indice, encounter in enumerate(EncountersJSON, start=1):
             print(f"Area {indice}: {encounter["location_area"]["name"]}")
+
         for indice1, ability in enumerate(dadosDICT["abilities"], start=1):
             print(f"Ability {indice1}: {ability["ability"]["name"]}")
+
         for stats in dadosDICT["stats"]:
             print(f"{stats["stat"]["name"]}: {stats["base_stat"]}")
-        print(json.dumps(dadosDICT["sprites"], indent=4))
-        print(f"Imagem: {dadosDICT["sprites"]["other"]["official-artwork"]["front_default"]}")
-
-        showImage(dadosDICT)
+        for tipo in dadosDICT["types"]:
+            print(tipo.keys())
+        """showImage(dadosDICT)"""
+    else:
+        print("Pokémon não foi encontrado.")
 
 def showImage(dataDICT):
     imageLink = dataDICT["sprites"]["other"]["official-artwork"]["front_default"]
