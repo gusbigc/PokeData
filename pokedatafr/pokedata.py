@@ -79,13 +79,13 @@ buscaPokemon(nome)
 """
 @app.route("/")
 def home():
-    return render_template("site.html")
+    return render_template("site.html", pokemon=None, buscou=False)
 
 @app.route("/buscar")
 def buscar():
     nome = request.args.get("pokemon")
     dadosDICT = buscaPokemon(nome)
-    return render_template("site.html", pokemon=dadosDICT)
+    return render_template("site.html", pokemon=dadosDICT, buscou=True)
 
 if __name__ == "__main__":
     app.run(debug=True)
