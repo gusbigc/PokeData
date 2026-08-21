@@ -8,7 +8,7 @@
     <!--controla como a página se comporta em telas menores(celulares)
         .Sem isso, sites ficam bizarros no mobile-->
     <title>Título da aba do navegador teste</title>
-    <link rel="stylesheet" href="estilo.css"><!--
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}"><!--
     <link> avisa o navegador que vai conectar um recurso externo
     rel="stylesheet" diz que tipo de recurso é(nesse caso, uma folha de estilo/CSS)
     href="estilo.css" é onde esse arquivo está(nesse caso, mesmo nome do arquivo que
@@ -38,17 +38,19 @@
     <!--a = ancora, href = pra onde o link leva-->
 
     <!--Class e id - o gancho pro CSS-->
+    {% if pokemon %}
         <div class="card">
-        <h1 id="nome-pokemon">Charmander</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/pt/9/95/Charizard.png">
-        <p class="info-basica">Altura: 0.6m &nbsp;|&nbsp; Peso: 8.5kg</p>
-        <p class="tipo">Tipo: Fogo</p>
+        <h1 id="nome-pokemon">{{ pokemon.name }}</h1>
+        <img src="{{ pokemon.sprites.other['official-artwork'].front_default}}">
+        <p class="info-basica">Altura: {{ pokemon.height / 10 }}m &nbsp;|&nbsp; Peso: {{ pokemon.weight / 10 }}kg</p>
+        <p class="tipo">Tipo: {{ pokemon.types[0].type.name }}</p>
         <ol>
-        <li>HP: 78</li>
-        <li>Ataque: 84</li>
-        <li>Defesa: 78</li>
+            {% for stats in pokemon.stats %}
+        <li>{{ stats.stat.name }}: {{stats.base_stat}} </li>
+        {% endfor %}
     </ol>
     </div>
+{% endif %}
     <!--class -> um "rótulo" que voce pode reutilizar em varias tags
         id -> um rótulo único, só uma tag na página inteira pode ter
         aquela id

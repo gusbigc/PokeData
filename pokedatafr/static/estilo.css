@@ -63,6 +63,12 @@ img{
         um elemento - o 0 é a margem em cima/baixo, e auto faz o navegador calcular automati
         camente margem igual dos dois lados, empurrando pro centro*/
         filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.3));/*sombra atras do pokemon*/
+        transition: transform 0.3s ease;
+
+}
+
+img:hover{
+    transform: scale(1.05);
 }
 /*Texto:cor,tamanho, alinhamento*/
 h1{

@@ -86,6 +86,9 @@ def buscar():
     nome = request.args.get("pokemon")
     dadosDICT = buscaPokemon(nome)
     return render_template("site.html", pokemon=dadosDICT)
+
+if __name__ == "__main__":
+    app.run(debug=True)
 '''
 @app.route("/") -> isso é um decorator(a etiqueta com @). ele diz que quando
 alguem acessar a pagina raiz do site(/, ou seja, o endereço principal), exe-
